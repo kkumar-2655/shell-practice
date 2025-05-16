@@ -27,7 +27,7 @@ fi
 
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
-if [ $?==0] ; then
+if [ $?==0 ] ; then
   echo "Jenkins key imported successfully."
 else
   echo "Failed to import Jenkins key."
