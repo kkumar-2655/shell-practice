@@ -8,8 +8,8 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Check if git is installed
-if command -v git >/dev/null 2>&1; then
-  echo "Git is installed."
+if command -v nginx >/dev/null 2>&1; then
+  echo "Nginx is installed."
 else
-  echo "Git is NOT installed."
+  echo "Nginx is NOT installed."
 fi
