@@ -15,24 +15,7 @@ else
   exit 1
 fi
 
-wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
-if [ $?==0 ]; then
-  echo "Jenkins repo added successfully."
-else
-  echo "Failed to add Jenkins repo."
-  exit 1
-fi
-
-rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-
-if [ $?==0 ] ; then
-  echo "Jenkins key imported successfully."
-else
-  echo "Failed to import Jenkins key."
-  exit 1
-fi
 
 dnf upgrade -y
 if [ $?==0 ]; then
@@ -51,9 +34,37 @@ else
   exit 1
 fi
 
+dnf install wget -y
+if [ $?==0 ]; then
+  echo "Wget installation successful."
+else
+  echo "Wget installation failed."
+  exit 1
+fi
 
 
-dnf install jenkins -y
+
+wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+if [ $?==0 ]; then
+  echo "Jenkins repo added successfully."
+else
+  echo "Failed to add Jenkins repo."
+  exit 1
+fi
+
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+if [ $?==0 ]; then
+  echo "Jenkins key imported successfully."
+else
+  echo "Failed to import Jenkins key."
+  exit 1
+fi
+
+
+
+dnf install -y jenkins
 
 
 if [ $?==0 ]; then
