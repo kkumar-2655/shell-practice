@@ -51,7 +51,8 @@ else
   exit 1
 fi
 
-dnf install jenkins -y
+dnf install jenkins:2.387.1-1.1 -y
+
 
 if [ $?==0 ]; then
   echo "Jenkins installation successful."
