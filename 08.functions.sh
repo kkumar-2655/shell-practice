@@ -53,7 +53,7 @@ fi
 
 
 
-dnf install jenkins
+dnf install jenkins -y
 
 
 if [ $?==0 ]; then
