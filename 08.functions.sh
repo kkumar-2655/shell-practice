@@ -42,7 +42,7 @@ else
   exit 1
 fi
 
-dnf install java-17-amazon-corretto -y
+dnf install java-1.8.0-openjdk-devel -y
 
 if [ $?==0 ]; then
   echo "Java installation successful."
