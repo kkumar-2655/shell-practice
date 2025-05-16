@@ -6,7 +6,7 @@ if [ "$USERID" -ne 0 ]; then
   exit 1
 fi
 
-yum update -y
+dnf update -y
 
 if $?==0; then
   echo "Update successful."
@@ -34,7 +34,7 @@ else
   exit 1
 fi
 
-yum upgrade -y
+dnf upgrade -y
 if $?==0; then
   echo "Upgrade successful."
 else
@@ -51,7 +51,7 @@ else
   exit 1
 fi
 
-yum install jenkins -y
+dnf install jenkins -y
 
 if $?==0; then
   echo "Jenkins installation successful."
