@@ -8,7 +8,7 @@ fi
 
 dnf update -y
 
-if $?==0; then
+if [ $?==0 ]; then
   echo "Update successful."
 else
   echo "Update failed."
@@ -18,7 +18,7 @@ fi
 wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
-if $?==0; then
+if [ $?==0 ]; then
   echo "Jenkins repo added successfully."
 else
   echo "Failed to add Jenkins repo."
@@ -27,7 +27,7 @@ fi
 
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
-if $?==0; then
+if [ $?==0] ; then
   echo "Jenkins key imported successfully."
 else
   echo "Failed to import Jenkins key."
@@ -35,7 +35,7 @@ else
 fi
 
 dnf upgrade -y
-if $?==0; then
+if [ $?==0 ]; then
   echo "Upgrade successful."
 else
   echo "Upgrade failed."
@@ -44,7 +44,7 @@ fi
 
 yum install java-17-amazon-corretto -y
 
-if $?==0; then
+if [ $?==0 ]; then
   echo "Java installation successful."
 else
   echo "Java installation failed."
@@ -53,7 +53,7 @@ fi
 
 dnf install jenkins -y
 
-if $?==0; then
+if [ $?==0 ]; then
   echo "Jenkins installation successful."
 else
   echo "Jenkins installation failed."
@@ -62,7 +62,7 @@ fi
 
 systemctl enable Jenkins
 
-if $?==0; then
+if [ $?==0 ]; then
   echo "Jenkins service enabled successfully."
 else
   echo "Failed to enable Jenkins service."
@@ -70,7 +70,7 @@ else
 fi
 
 systemctl start Jenkins
-if $?==0; then
+if [ $?==0 ]; then
   echo "Jenkins service started successfully."
 else
   echo "Failed to start Jenkins service."
