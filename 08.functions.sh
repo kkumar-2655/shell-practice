@@ -25,7 +25,7 @@ else
   exit 1
 fi
 
-dnf install  java-11-openjdk-devel -y
+dnf install -y java-17-openjdk
 
 if [ $?==0 ]; then
   echo "Java installation successful."
