@@ -42,7 +42,7 @@ else
   exit 1
 fi
 
-yum install java-17-amazon-corretto -y
+dnf install java-17-amazon-corretto -y
 
 if [ $?==0 ]; then
   echo "Java installation successful."
