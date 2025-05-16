@@ -42,7 +42,7 @@ else
   exit 1
 fi
 
-dnf install java-1.8.0-openjdk-devel -y
+dnf install  java-11-openjdk-devel -y
 
 if [ $?==0 ]; then
   echo "Java installation successful."
@@ -51,7 +51,9 @@ else
   exit 1
 fi
 
-dnf install jenkins:2.387.1-1.1 -y
+
+
+dnf install jenkins
 
 
 if [ $?==0 ]; then
