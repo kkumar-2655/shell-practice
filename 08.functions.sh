@@ -44,7 +44,8 @@ else
 fi
 
 # Add Jenkins repo
-wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+curl -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
 if [ $? -eq 0 ]; then
   echo "Jenkins repo added successfully."
 else
