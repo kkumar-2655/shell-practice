@@ -6,6 +6,6 @@ if systemctl status "$SERVICE" | grep running; then
   echo "$SERVICE is running...."
 
 else
-systemctl start "$SERVICE"
-  echo "$SERVICE is running."
+# systemctl start "$SERVICE"
+  echo "$SERVICE is not running."
 fi
