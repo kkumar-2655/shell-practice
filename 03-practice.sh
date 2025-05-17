@@ -4,6 +4,7 @@ SERVICE="git"
 
 if "$SERVICE --version" | grep git ; then
   echo "$SERVICE is running...."
+  exit 1
 
 else
 # systemctl start "$SERVICE"
