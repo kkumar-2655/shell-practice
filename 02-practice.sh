@@ -2,7 +2,7 @@
 SERVICE="jenkins"
 # Check if the service is running 
 
-if systemctl status "$SERVICE" | grep active; then
+if systemctl status "$SERVICE" | grep running; then
   echo "$SERVICE is running...."
 
 else
