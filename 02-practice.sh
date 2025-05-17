@@ -1,5 +1,5 @@
 #!/bin/bash
-SERVICE="jenkins"
+SERVICE="git"
 # Check if the service is running 
 
 if systemctl status "$SERVICE" | grep running; then
