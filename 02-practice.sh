@@ -2,9 +2,10 @@
 SERVICE="jenkins"
 # Check if the service is running 
 
-if ! pgrep -x "$SERVICE" > /dev/null; then
-  echo "$SERVICE is not running. Restarting..."
-  systemctl start "$SERVICE"
+if systemctl status "$SERVICE" | grep active; then
+  echo "$SERVICE is running...."
+
 else
+systemctl start "$SERVICE"
   echo "$SERVICE is running."
 fi
