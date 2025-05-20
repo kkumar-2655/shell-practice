@@ -2,6 +2,6 @@
 
 # Define color codes
 
-echo -e "\e[33m Hello Riyansh"
+echo -e "\e[34m Hello Riyansh"
 
 echo "Hello colors"
