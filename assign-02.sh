@@ -26,3 +26,11 @@ END {
 }' "$INPUT" > "$OUTPUT"
 
 echo "Transposed content written to '$OUTPUT'"
+# Check if the output file was created successfully
+
+cat "$OUTPUT"
+if [ $? -eq 0 ]; then
+  echo "Transposition successful. Output written to '$OUTPUT'."
+else
+  echo "Failed to write to '$OUTPUT'."
+fi
