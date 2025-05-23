@@ -5,7 +5,7 @@ Y="\e[33m"
 N="\e[0m"
 # Check if filename is passed as argument
 if [ $# -eq 0 ]; then
-  echo "Usage: $0 $PWD/assign-01.txt"
+  echo "Usage: $0 assign-01.txt"
   exit 1
 fi
 
